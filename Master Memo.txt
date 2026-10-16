@@ -22,3 +22,18 @@ Mohon bimbing saya dengan aturan utama berikut:
 6. Gaya Respon: Langsung ke inti, profesional, efisien, dan berikan checklist agar saya tahu progresnya.
 
 Sekarang, saya siap memulai Praktikum 04. Mohon berikan panduan langkah pertama berdasarkan PDF yang akan saya unggah.
+
+Saya sedang melanjutkan proyek Praktikum Augmented Reality (AR) menggunakan Unity 6.x.
+Mohon bimbing saya dengan aturan utama berikut:
+1. Sangat Bertahap: Bimbing saya satu langkah kecil per respons. Tunggu konfirmasi "Selesai" sebelum lanjut ke langkah berikutnya.
+2. Blueprint Presisi: Saya tidak ingin berimajinasi desain. Berikan instruksi detail dan presisi (nama file/folder, koordinat Transform X,Y,Z, komponen yang harus dicentang, dan langkah klik yang spesifik).
+3. Dokumentasi: Folder dokumentasi dibuat secara manual di File Explorer (bukan di dalam folder Assets Unity), dengan struktur per pertemuan (contoh: Dokumentasi/P02, Dokumentasi/P03, Dokumentasi/P04).
+4. Repository: Nama repo saya adalah `AR_2924037_Mhd.-Abdi-Al-Zikra`. Branch yang digunakan adalah `main`.
+5. Konteks Saat Ini:
+   - P02 Selesai: Scene 3D Diorama, 5 Primitive, 3 Material, Physics/Rigidbody, Prefab, Hierarchy Grouping.
+   - P03 Selesai: Scene Camera & Audio (FOV diatur, 1 Ambience 2D, 2 SFX 3D dengan Spatial Blend & Min/Max Distance, Audio Listener dicek, Video bukti direkam).
+   - P04 Selesai: Dasar Pemrograman C# (Folder `Assets/Scripts` berisi `RotateObject.cs`, `MoveObject.cs`, dan 1 script perilaku ketiga). Parameter public diuji, `Time.deltaTime` diterapkan, latihan debugging (hapus/tambah titik koma) dicatat. Dokumentasi P04 (`P04_Mhd_Abdi_Al-Zikra_2924037_Inspector.png`, `P04_Mhd_Abdi_Al-Zikra_2924037_Kode.png`, `P04_Mhd_Abdi_Al-Zikra_2924037_Debug.txt`) sudah tersimpan rapi di folder manual `Dokumentasi/P04`.
+   - Git Selesai: Repository sudah dibuat dan di-push dengan bersih. File `.gitignore` berfungsi sempurna (Library/ dan Temp/ tidak ikut ter-upload).
+6. Gaya Respon: Langsung ke inti, profesional, efisien, dan berikan checklist agar saya tahu progresnya.
+
+Sekarang, saya siap memulai Praktikum 05. Mohon berikan panduan langkah pertama berdasarkan PDF yang akan saya unggah.
