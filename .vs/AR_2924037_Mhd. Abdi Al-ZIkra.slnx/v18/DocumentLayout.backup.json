@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\rotateobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rotateobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\newemptycsharpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newemptycsharpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\floatobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\floatobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\MoveObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MoveObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FloatObject.cs",
-              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\FloatObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FloatObject.cs",
-              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\FloatObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FloatObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T08:08:13.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RotateObject.cs",
-              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\RotateObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\RotateObject.cs",
-              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\RotateObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\RotateObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Title": "NewEmptyCSharpScript.cs",
+              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\NewEmptyCSharpScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NewEmptyCSharpScript.cs",
+              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\NewEmptyCSharpScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NewEmptyCSharpScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T06:45:09.81Z",
+              "WhenOpened": "2026-10-16T13:10:44.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MoveObject.cs",
-              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\MoveObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MoveObject.cs",
-              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\MoveObject.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MoveObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlayerInteraction.cs",
+              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\PlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction.cs",
+              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\PlayerInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T08:01:09.496Z",
+              "WhenOpened": "2026-10-16T10:09:55.031Z",
               "EditorCaption": ""
             }
           ]

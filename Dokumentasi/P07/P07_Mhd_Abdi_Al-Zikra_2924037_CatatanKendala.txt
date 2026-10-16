@@ -1,0 +1,9 @@
+CATATAN KENDALA PRAKTIKUM 07
+Nama: Mhd. Abdi Al Zikra
+NIM: 2924037
+
+1. Masalah: Player tidak bergerak di Smartphone Android
+   Gejala: APK berhasil di-build dan terinstal di HP. Aplikasi berjalan tanpa crash, namun Player (Cube) tidak bergerak sama sekali saat HP dimiringkan atau disentuh.
+   Dugaan penyebab setelah diperiksa: Script PlayerMovement.cs di Unity menggunakan Input.GetAxis() yang secara default membaca input dari Keyboard (WASD) atau Gamepad fisik. Smartphone Android tidak memiliki keyboard fisik yang terhubung, sehingga nilai input selalu 0.
+   Langkah penyelesaian: Mengubah logika input pada script PlayerMovement.cs dari Input.GetAxis() menjadi Input.acceleration. Ini memanfaatkan sensor Accelerometer/Gyroscope bawaan HP, sehingga Player bergerak ketika smartphone dimiringkan (tilt control).
+   Hasil setelah diperbaiki: Player berhasil bergerak dengan responsif sesuai kemiringan HP. Fungsi Collision (menabrak Obstacle) dan Trigger (menyentuh Target) juga berhasil diuji dan berjalan normal di perangkat nyata.
