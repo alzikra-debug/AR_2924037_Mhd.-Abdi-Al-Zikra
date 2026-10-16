@@ -1,0 +1,15 @@
+CATATAN KENDALA PRAKTIKUM 06
+Nama: Mhd. Abdi Al Zikra
+NIM: 2924037
+
+1. Masalah: Package Name Error di Unity
+   Gejala: Muncul error merah "Each segment must start with an alphabetical character".
+   Penyebab: Package Name "com.kelasar.2924037mhdabdialzikra" dimulai dengan angka pada segmen ketiga.
+   Tindakan: Mengubah Package Name menjadi "com.kelasar.mhdabdialzikra2924037" (angka dipindah ke belakang).
+   Hasil: Error hilang, Package Name valid.
+
+2. Masalah: ADB Command Not Found
+   Gejala: Terminal menampilkan "bash: adb: command not found" saat mengetik adb devices.
+   Penyebab: Path ADB belum ditambahkan ke Environment Variables Windows.
+   Tindakan: Sesuai panduan PDF, tidak mengubah PATH secara acak. Mengandalkan verifikasi Run Device di Unity Editor.
+   Hasil: Device tetap terbaca sempurna di Unity Build Profiles sebagai "Vivo V2130".
