@@ -1,0 +1,31 @@
+=== CATATAN DEBUGGING PRAKTIKUM 04 ===
+Nama Mahasiswa: Mhd. Abdi Al-Zikra
+NIM: 2924037
+Tanggal: 16/10/2026
+
+--- Latihan Debugging Sengaja ---
+
+Nama File: RotateObject.cs
+Nomor Baris: 5
+Nomor Kolom: 29
+Kode Error: CS1002
+Pesan Error: ; expected
+
+Penyebab:
+Saya sengaja menghapus tanda titik koma (;) di akhir baris:
+  public float speed = 50f
+Seharusnya:
+  public float speed = 50f;
+
+Perbaikan:
+Menambahkan kembali tanda titik koma (;) di akhir baris tersebut.
+
+Hasil:
+Setelah titik koma ditambahkan kembali, error merah hilang dari Console
+dan script RotateObject berhasil di-compile tanpa masalah.
+
+--- Pelajaran yang Didapat ---
+1. Selalu baca pesan error dari Console sebelum panik.
+2. Perhatikan nama file dan nomor baris yang ditunjukkan Unity.
+3. Error CS1002 berarti ada tanda titik koma yang hilang.
+4. Setelah memperbaiki kode, simpan file (Ctrl+S) dan tunggu Unity compile ulang.
