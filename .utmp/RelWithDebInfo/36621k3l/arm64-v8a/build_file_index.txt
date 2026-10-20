@@ -1,2 +1,0 @@
-D:\AR_2924037_Mhd. Abdi Al-ZIkra\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
-D:\AR_2924037_Mhd. Abdi Al-ZIkra\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
