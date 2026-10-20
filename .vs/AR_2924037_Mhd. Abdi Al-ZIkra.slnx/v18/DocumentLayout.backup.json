@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\newemptycsharpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newemptycsharpscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\ar_2924037_mhd. abdi al-zikra\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NewEmptyCSharpScript.cs",
-              "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\NewEmptyCSharpScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NewEmptyCSharpScript.cs",
-              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\NewEmptyCSharpScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NewEmptyCSharpScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T13:10:44.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction.cs",
-              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\PlayerInteraction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\AR_2924037_Mhd. Abdi Al-ZIkra\\Assets\\Scripts\\PlayerInteraction.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T10:09:55.031Z",
+              "WhenOpened": "2026-10-18T09:34:36.052Z",
               "EditorCaption": ""
             }
           ]

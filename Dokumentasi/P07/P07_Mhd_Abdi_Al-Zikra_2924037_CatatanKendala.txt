@@ -1,9 +1,172 @@
 CATATAN KENDALA PRAKTIKUM 07
 Nama: Mhd. Abdi Al Zikra
 NIM: 2924037
+Tanggal: 16 Oktober 2026
 
-1. Masalah: Player tidak bergerak di Smartphone Android
-   Gejala: APK berhasil di-build dan terinstal di HP. Aplikasi berjalan tanpa crash, namun Player (Cube) tidak bergerak sama sekali saat HP dimiringkan atau disentuh.
-   Dugaan penyebab setelah diperiksa: Script PlayerMovement.cs di Unity menggunakan Input.GetAxis() yang secara default membaca input dari Keyboard (WASD) atau Gamepad fisik. Smartphone Android tidak memiliki keyboard fisik yang terhubung, sehingga nilai input selalu 0.
-   Langkah penyelesaian: Mengubah logika input pada script PlayerMovement.cs dari Input.GetAxis() menjadi Input.acceleration. Ini memanfaatkan sensor Accelerometer/Gyroscope bawaan HP, sehingga Player bergerak ketika smartphone dimiringkan (tilt control).
-   Hasil setelah diperbaiki: Player berhasil bergerak dengan responsif sesuai kemiringan HP. Fungsi Collision (menabrak Obstacle) dan Trigger (menyentuh Target) juga berhasil diuji dan berjalan normal di perangkat nyata.
+================================================================
+KENDALA 1: Player Tidak Bergerak di Smartphone Android
+================================================================
+
+Kendala yang ditemukan:
+Setelah build dan install APK pertama ke smartphone Vivo V23 5G, 
+aplikasi berjalan tanpa crash namun Player (Cube biru) tidak bergerak 
+sama sekali saat tombol keyboard (WASD) ditekan di laptop.
+
+Gejala/pesan error:
+- Tidak ada error merah di Console Unity
+- Aplikasi terinstal dan terbuka normal di HP
+- Player diam meskipun keyboard ditekan
+- Tidak ada respons input sama sekali
+
+Dugaan penyebab setelah diperiksa:
+Script PlayerMovement.cs menggunakan Input.GetAxis("Horizontal") dan 
+Input.GetAxis("Vertical") yang secara default membaca input dari 
+Keyboard fisik atau Gamepad. Smartphone Android tidak memiliki keyboard 
+fisik yang terhubung, sehingga nilai input selalu 0 dan Player tidak bergerak.
+
+Langkah penyelesaian:
+1. Membuat script baru bernama MobileInput.cs untuk menampung input 
+   dari tombol UI touch screen
+2. Mengubah PlayerMovement.cs untuk membaca input dari dua sumber:
+   - Input.GetAxis() untuk keyboard (Editor/PC)
+   - MobileInput.horizontal/vertical untuk tombol UI (Mobile)
+3. Membuat UI Canvas dengan 4 tombol (Atas, Bawah, Kiri, Kanan)
+4. Menambahkan komponen Event Trigger ke setiap tombol dengan:
+   - Pointer Down: memanggil MobileInput.SetVertical/SetHorizontal 
+     dengan nilai 1 atau -1
+   - Pointer Up: memanggil fungsi yang sama dengan nilai 0
+5. Build ulang dan test di HP
+
+Hasil setelah diperbaiki:
+Player berhasil bergerak dengan responsif saat tombol UI disentuh di 
+layar smartphone. Fungsi collision (menabrak Obstacle) dan trigger 
+(menyentuh Target) juga berjalan normal. Notifikasi status muncul di 
+layar saat interaksi terjadi.
+
+================================================================
+KENDALA 2: UI Tombol Terlalu Kecil di Layar Smartphone
+================================================================
+
+Kendala yang ditemukan:
+Setelah build berhasil dengan tombol UI, ukuran tombol D-Pad terlalu 
+kecil (80x80 pixel) dan sulit disentuh dengan jempol di layar smartphone 
+Vivo V23 5G yang memiliki resolusi 1080x2400 pixels.
+
+Gejala/pesan error:
+- Tombol terlihat sangat kecil di layar HP
+- Sulit ditekan dengan akurat
+- Notifikasi status text juga terlalu kecil dan posisinya terlalu 
+  ke atas (terpotong)
+
+Dugaan penyebab setelah diperiksa:
+Ukuran UI yang digunakan (80x80 pixel) cocok untuk monitor laptop 
+dengan resolusi 1920x1080, tetapi tidak proporsional untuk layar 
+smartphone dengan aspect ratio 20:9 dan kepadatan pixel 409 ppi.
+
+Langkah penyelesaian:
+1. Memperbesar ukuran tombol dari 80x80 menjadi 200x200 pixel
+2. Memperbesar font size tombol dari 32 menjadi 36
+3. Mengatur ulang posisi tombol dengan anchor Bottom Left:
+   - Btn_Up: Pos X=260, Pos Y=400
+   - Btn_Down: Pos X=260, Pos Y=120
+   - Btn_Left: Pos X=60, Pos Y=260
+   - Btn_Right: Pos X=460, Pos Y=260
+4. Memperbesar StatusText: Width=800, Height=100, Font Size=40
+5. Mengatur Canvas Scaler dengan mode "Scale With Screen Size" 
+   dan reference resolution 1080x2400
+6. Build ulang dan verifikasi di HP
+
+Hasil setelah diperbaiki:
+Tombol D-Pad sekarang berukuran besar (200x200 pixel) dan nyaman 
+disentuh dengan jempol. Notifikasi status terbaca jelas di bagian 
+atas layar. UI proporsional dengan aspect ratio 20:9 layar Vivo V23 5G.
+
+================================================================
+KENDALA 3: Package Name Error - Segment Harus Dimulai dengan Huruf
+================================================================
+
+Kendala yang ditemukan:
+Saat mengisi Package Identifier di Player Settings, Unity menampilkan 
+error merah: "Each segment must start with an alphabetical character."
+
+Gejala/pesan error:
+- Border merah pada field Package Name
+- Pesan error: "The Package Name must follow the convention 
+  'com.YourCompanyName.YourProductName' and must contain only 
+  alphanumeric and underscore characters. Each segment must start 
+  with an alphabetical character."
+- Tidak bisa melanjutkan build
+
+Dugaan penyebab setelah diperiksa:
+Package Name yang diisi "com.kelasar.p07.2924037mhdabdialzikra" memiliki 
+segmen terakhir "2924037mhdabdialzikra" yang dimulai dengan angka '2', 
+padahal aturan Android Package Name mewajibkan setiap segmen dimulai 
+dengan huruf alfabet.
+
+Langkah penyelesaian:
+Mengubah Package Name menjadi "com.kelasar.p07.mhd2924037" dengan 
+memindahkan huruf "mhd" ke depan angka NIM, sehingga segmen terakhir 
+dimulai dengan huruf 'm' yang valid.
+
+Hasil setelah diperbaiki:
+Error hilang, Package Name valid, dan proses build dapat dilanjutkan 
+tanpa masalah.
+
+================================================================
+KENDALA 4: Unsupported Input Handling on Android
+================================================================
+
+Kendala yang ditemukan:
+Saat menekan Build and Run, muncul dialog peringatan: "Unsupported 
+Input Handling on Android. Active Input Handling is set to 'Both' in 
+Player Settings."
+
+Gejala/pesan error:
+- Dialog popup muncul sebelum build dimulai
+- Pesan: "This is not supported on Android and might cause input 
+  and performance issues."
+- Opsi: Ignore atau Cancel Build
+
+Dugaan penyebab setelah diperiksa:
+Unity 6.x secara default mengaktifkan kedua sistem input (Input Manager 
+lama dan Input System baru) secara bersamaan. Untuk build Android dengan 
+script yang menggunakan Input Manager lama, konfigurasi "Both" tidak 
+didukung.
+
+Langkah penyelesaian:
+1. Membatalkan build (Cancel Build)
+2. Buka Edit > Project Settings > Player
+3. Pada bagian Other Settings, cari Active Input Handling
+4. Ubah dari "Both" menjadi "Input Manager (Old)"
+5. Unity meminta restart editor, klik Yes
+6. Setelah restart, build ulang dengan sukses
+
+Hasil setelah diperbaiki:
+Build berhasil tanpa peringatan, dan script Input.GetAxis() berfungsi 
+normal di Editor untuk pengujian dengan keyboard.
+
+================================================================
+RINGKASAN PEMBELAJARAN
+================================================================
+
+1. Perbedaan Input PC vs Mobile:
+   - PC menggunakan keyboard/mouse (Input.GetAxis)
+   - Mobile memerlukan UI touch buttons atau accelerometer
+   - Solusi terbaik: dual input system yang mendukung keduanya
+
+2. Pentingnya UI Adaptif:
+   - Ukuran UI harus disesuaikan dengan resolusi target device
+   - Gunakan Canvas Scaler untuk adaptasi otomatis
+   - Test di aspect ratio yang sesuai sebelum build
+
+3. Aturan Package Name Android:
+   - Setiap segmen (dipisah titik) harus dimulai dengan huruf
+   - Tidak boleh ada spasi atau karakter khusus
+   - Format: com.company.product (semua huruf kecil)
+
+4. Proses Build yang Benar:
+   - Uji di Editor terlebih dahulu (bebas error merah)
+   - Konfigurasi platform dan identitas aplikasi
+   - Build and Run dengan device terhubung
+   - Test fungsi di perangkat nyata
+   - Dokumentasikan kendala dan solusi

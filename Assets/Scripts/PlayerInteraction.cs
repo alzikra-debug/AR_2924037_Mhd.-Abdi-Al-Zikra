@@ -16,12 +16,20 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (touchedObject.CompareTag("Target"))
         {
-            Debug.Log("Target tersentuh. Praktikum berhasil.");
+            string message = "Target tersentuh. Praktikum berhasil!";
+            if (StatusNotifier.Instance != null)
+            {
+                StatusNotifier.Instance.ShowStatus(message);
+            }
             touchedObject.SetActive(false);
         }
         else if (touchedObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Obstacle tersentuh: " + touchedObject.name);
+            string message = "Obstacle tersentuh: " + touchedObject.name;
+            if (StatusNotifier.Instance != null)
+            {
+                StatusNotifier.Instance.ShowStatus(message);
+            }
         }
     }
 }

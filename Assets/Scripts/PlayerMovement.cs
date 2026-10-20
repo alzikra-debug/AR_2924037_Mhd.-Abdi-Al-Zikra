@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 8f; // Speed dinaikkan sedikit karena input tilt lebih halus daripada keyboard
+    public float moveSpeed = 5f;
     private Rigidbody rb;
 
     void Awake()
@@ -13,10 +13,18 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Mengganti Input.GetAxis dengan Input.acceleration (Gyroscope/Accelerometer HP)
-        float horizontal = Input.acceleration.x;
-        float vertical = Input.acceleration.y;
+        float horizontal = 0f;
+        float vertical = 0f;
 
+        // Input 1: Keyboard (untuk Editor/PC)
+        horizontal += Input.GetAxis("Horizontal");
+        vertical += Input.GetAxis("Vertical");
+
+        // Input 2: Mobile Touch Buttons (untuk Android)
+        horizontal += MobileInput.horizontal;
+        vertical += MobileInput.vertical;
+
+        // Normalisasi agar kecepatan tetap konsisten
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 nextPosition = rb.position + direction * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(nextPosition);
